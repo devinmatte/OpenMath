@@ -1,0 +1,18 @@
+{
+  "name": "openmath",
+  "description": "An Open Source Math Project",
+  "repository": "https://github.com/devinmatte/OpenMath",
+  "keywords": [
+    "react",
+    "isomorphic",
+    "universal",
+    "webpack",
+    "express",
+    "hot reloading",
+    "react-hot-reloader",
+    "redux",
+    "starter",
+    "boilerplate",
+    "babel"
+  ]
+}
