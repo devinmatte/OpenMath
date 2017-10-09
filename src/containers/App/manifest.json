@@ -1,0 +1,12 @@
+{
+    "background_color": "#FFF",
+    "description": "A project to bring Math studying and learning resources, free, via Open Source",
+    "dir": "auto",
+    "display": "fullscreen",
+    "lang": "en",
+    "name": "OpenMath",
+    "orientation": "any",
+    "short_name": "OpenMath",
+    "start_url": "/",
+    "theme_color": "#FFF"
+}

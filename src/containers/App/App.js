@@ -59,6 +59,7 @@ export default class App extends Component {
   render() {
     const {user} = this.props;
     const styles = require('./App.scss');
+    // const manifest = require('./Manifest.json');
 
     return (
       <div className={styles.app}>
@@ -107,7 +108,7 @@ export default class App extends Component {
             {user &&
             <p className={styles.loggedInMessage + ' navbar-text'}>Logged in as <strong>{user.name}</strong>.</p>}
             <Nav navbar pullRight>
-              <NavItem eventKey={1} target="_blank" title="View on Github" href="https://github.com/erikras/react-redux-universal-hot-example">
+              <NavItem eventKey={1} target="_blank" title="View on Github" href="https://github.com/devinmatte/OpenMath">
                 <i className="fa fa-github"/>
               </NavItem>
             </Nav>
