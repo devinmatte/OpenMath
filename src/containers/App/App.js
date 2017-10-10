@@ -1,16 +1,16 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { IndexLink } from 'react-router';
-import { LinkContainer } from 'react-router-bootstrap';
+import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
+import {IndexLink} from 'react-router';
+import {LinkContainer} from 'react-router-bootstrap';
 import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import Helmet from 'react-helmet';
-import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
-import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
-import { push } from 'react-router-redux';
+import {isLoaded as isInfoLoaded, load as loadInfo} from 'redux/modules/info';
+import {isLoaded as isAuthLoaded, load as loadAuth, logout} from 'redux/modules/auth';
+import {push} from 'react-router-redux';
 import config from '../../config';
-import { asyncConnect } from 'redux-async-connect';
+import {asyncConnect} from 'redux-async-connect';
 
 @asyncConnect([{
   promise: ({store: {dispatch, getState}}) => {
@@ -57,7 +57,6 @@ export default class App extends Component {
   };
 
   render() {
-    const {user} = this.props;
     const styles = require('./App.scss');
     // const manifest = require('./Manifest.json');
 
@@ -77,10 +76,6 @@ export default class App extends Component {
 
           <Navbar.Collapse eventKey={0}>
             <Nav navbar>
-              {user && <LinkContainer to="/chat">
-                <NavItem eventKey={1}>Chat</NavItem>
-              </LinkContainer>}
-
               <LinkContainer to="/widgets">
                 <NavItem eventKey={2}>Widgets</NavItem>
               </LinkContainer>
@@ -93,22 +88,10 @@ export default class App extends Component {
               <LinkContainer to="/about">
                 <NavItem eventKey={5}>About Us</NavItem>
               </LinkContainer>
-
-              {!user &&
-              <LinkContainer to="/login">
-                <NavItem eventKey={6}>Login</NavItem>
-              </LinkContainer>}
-              {user &&
-              <LinkContainer to="/logout">
-                <NavItem eventKey={7} className="logout-link" onClick={this.handleLogout}>
-                  Logout
-                </NavItem>
-              </LinkContainer>}
             </Nav>
-            {user &&
-            <p className={styles.loggedInMessage + ' navbar-text'}>Logged in as <strong>{user.name}</strong>.</p>}
             <Nav navbar pullRight>
-              <NavItem eventKey={1} target="_blank" title="View on Github" href="https://github.com/devinmatte/OpenMath">
+              <NavItem eventKey={1} target="_blank" title="View on Github"
+                       href="https://github.com/devinmatte/OpenMath">
                 <i className="fa fa-github"/>
               </NavItem>
             </Nav>
@@ -120,10 +103,8 @@ export default class App extends Component {
         </div>
 
         <div className="well text-center">
-          Have questions? Ask for help <a
-          href="https://github.com/erikras/react-redux-universal-hot-example/issues"
-          target="_blank">on Github</a> or in the <a
-          href="https://discord.gg/0ZcbPKXt5bZZb1Ko" target="_blank">#react-redux-universal</a> Discord channel.
+          Have questions? Ask for help <a href="https://github.com/devinmatte/OpenMath/issues" target="_blank">on
+          Github</a>
         </div>
       </div>
     );
